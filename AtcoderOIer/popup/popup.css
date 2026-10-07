@@ -1,0 +1,75 @@
+body {
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  width: 320px;
+  margin: 0;
+  padding: 14px 16px;
+  color: #24292f;
+  background: #f6f8fa;
+}
+
+.wrap { background: #fff; border: 1px solid #d0d7de; border-radius: 10px; padding: 14px; }
+
+h2 { font-size: 15px; margin: 0 0 12px; }
+
+.field { margin-bottom: 10px; flex: 1; }
+.field-row { display: flex; gap: 8px; }
+
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.field input[type="text"],
+.field input[type="password"],
+.field select {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.req { color: #cf222e; }
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  margin: 4px 0 10px;
+  cursor: pointer;
+}
+
+.btns { display: flex; gap: 8px; }
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #fff;
+  background: #1f6feb;
+}
+button:hover { background: #1a5fd0; }
+button.secondary { background: #eaeef2; color: #24292f; }
+button.secondary:hover { background: #d8dee4; }
+
+#status { font-size: 12px; margin: 8px 0 0; min-height: 14px; }
+#status.ok { color: #1a7f37; }
+#status.err { color: #cf222e; }
+
+.footer { margin-top: 10px; border-top: 1px solid #eaeef2; padding-top: 8px; }
+button.link {
+  background: none;
+  color: #1f6feb;
+  padding: 0;
+  font-size: 12px;
+}
+button.link:hover { background: none; text-decoration: underline; }
+
+.tip { font-size: 12px; color: #57606a; margin: 10px 0 0; line-height: 1.6; }

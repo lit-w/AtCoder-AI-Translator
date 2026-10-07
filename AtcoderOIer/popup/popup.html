@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AtCoder AI Translator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="wrap">
+    <h2>🌐 AtCoder AI Translator</h2>
+
+    <div id="config" class="config">
+      <div class="field">
+        <label for="apiKey">API Key <span class="req">*</span></label>
+        <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="apiFormat">接口协议</label>
+          <select id="apiFormat">
+            <option value="openai">OpenAI 兼容</option>
+            <option value="anthropic">Anthropic</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="model">模型</label>
+          <input type="text" id="model" placeholder="gpt-4o-mini">
+        </div>
+      </div>
+      <div class="field">
+        <label for="baseUrl">接口地址（Base URL）</label>
+        <input type="text" id="baseUrl" placeholder="https://api.openai.com/v1">
+      </div>
+      <div class="field">
+        <label for="targetLang">目标语言</label>
+        <input type="text" id="targetLang" placeholder="简体中文">
+      </div>
+      <label class="check">
+        <input type="checkbox" id="autoTranslate">
+        打开题目页时自动翻译
+      </label>
+      <div class="btns">
+        <button id="saveBtn">保存</button>
+        <button id="testBtn" class="secondary">测试连接</button>
+      </div>
+      <p id="status"></p>
+    </div>
+
+    <div class="footer">
+      <button id="openOptions" class="link">⚙️ 高级设置</button>
+    </div>
+
+    <p class="tip">在任意 AtCoder 页面点击右下角「🌐 AI 翻译」按钮，即可翻译当前页面（题面、比赛信息、提交列表、排行榜等）。</p>
+  </div>
+  <script src="../common.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

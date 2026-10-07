@@ -1,0 +1,245 @@
+.at-ai-panel {
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  background: #f6f8fa;
+  line-height: 1.7;
+}
+
+.at-ai-panel h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #1f6feb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.at-ai-panel h4 {
+  margin: 16px 0 6px;
+  font-size: 15px;
+  color: #24292f;
+}
+
+.at-ai-panel pre {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 10px 12px;
+  overflow-x: auto;
+}
+
+.at-ai-status {
+  color: #57606a;
+  font-size: 14px;
+}
+
+.at-ai-error {
+  color: #cf222e;
+}
+
+.at-ai-btn {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+  background: #1f6feb;
+  margin: 0 8px 8px 0;
+}
+
+.at-ai-btn:hover { background: #1a5fd0; }
+.at-ai-btn:disabled { background: #8c959f; cursor: not-allowed; }
+
+.at-ai-btn.secondary {
+  background: #eaeef2;
+  color: #24292f;
+}
+.at-ai-btn.secondary:hover { background: #d8dee4; }
+
+.at-ai-panel ul { margin: 4px 0 8px; padding-left: 22px; }
+.at-ai-panel code { background: #fff; border: 1px solid #e5e7eb; border-radius: 4px; padding: 1px 5px; }
+.at-ai-panel pre code { border: none; padding: 0; background: transparent; }
+
+/* ============ 译文容器（替换原文模式） ============ */
+.at-ai-translation {
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  line-height: 1.8;
+  color: #24292f;
+  font-size: 15px;
+}
+
+.at-ai-trans-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px dashed #d0d7de;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+
+.at-ai-trans-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f6feb;
+}
+
+.at-ai-header-btns {
+  display: inline-flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.at-ai-trans-body h1,
+.at-ai-trans-body h2,
+.at-ai-trans-body h3,
+.at-ai-trans-body h4,
+.at-ai-trans-body h5,
+.at-ai-trans-body h6 {
+  margin: 18px 0 8px;
+  color: #24292f;
+  border: none;
+  padding: 0;
+  font-weight: 700;
+}
+
+.at-ai-trans-body p { margin: 8px 0; }
+.at-ai-trans-body ul, .at-ai-trans-body ol { margin: 8px 0; padding-left: 24px; }
+.at-ai-trans-body li { margin: 4px 0; }
+.at-ai-trans-body table { border-collapse: collapse; margin: 10px 0; width: 100%; }
+.at-ai-trans-body th, .at-ai-trans-body td {
+  border: 1px solid #d0d7de;
+  padding: 6px 10px;
+  text-align: left;
+}
+.at-ai-trans-body th { background: #f6f8fa; }
+.at-ai-trans-body pre {
+  background: #f6f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 10px 12px;
+  overflow-x: auto;
+  font-size: 13px;
+}
+.at-ai-trans-body code {
+  background: #eff1f3;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 90%;
+}
+.at-ai-trans-body pre code { background: transparent; padding: 0; }
+.at-ai-trans-body blockquote {
+  border-left: 3px solid #d0d7de;
+  margin: 10px 0;
+  padding: 2px 12px;
+  color: #57606a;
+}
+.at-ai-trans-body hr { border: none; border-top: 1px solid #d0d7de; margin: 14px 0; }
+.at-ai-trans-body a { color: #1f6feb; }
+.at-ai-trans-body img { max-width: 100%; }
+
+/* 分段翻译进度条 */
+.at-ai-progress {
+  font-size: 13px;
+  color: #57606a;
+  background: #f6f8fa;
+  border: 1px dashed #d0d7de;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 8px 0 12px;
+}
+
+.at-ai-truncated-note { color: #9a6700; background: #fff8c5; border-color: #eac54f; }
+.at-ai-progress.at-ai-error { color: #cf222e; background: #fff5f5; border-color: #ffb3b8; }
+
+.at-ai-chunk + .at-ai-chunk { margin-top: 4px; }
+
+/* 帖内替换式译文容器 */
+.at-ai-inline-trans {
+  margin: 10px 0;
+  padding: 12px 16px;
+  background: #fafbfc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+.at-ai-inline-trans.at-ai-error { color: #cf222e; background: #fff5f5; border-color: #ffb3b8; }
+
+/* 常驻浮动翻译按钮 */
+#at-ai-float-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 99999;
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 22px;
+  padding: 10px 18px;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(31, 111, 235, 0.45);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0.5;
+  transition: opacity 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+#at-ai-float-btn:hover {
+  background: #1a5fd0;
+  opacity: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+#at-ai-float-btn:disabled { background: rgba(140, 149, 159, 0.6); cursor: not-allowed; }
+
+/* 帖子/讨论逐条翻译按钮 */
+.at-ai-mini-btn {
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  cursor: pointer;
+  border: 1px solid #1f6feb;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-size: 12px;
+  color: #1f6feb;
+  background: #fff;
+  margin: 6px 0 0;
+}
+
+.at-ai-mini-btn:hover { background: #eaf2ff; }
+.at-ai-mini-btn:disabled { color: #8c959f; border-color: #8c959f; cursor: not-allowed; }
+
+/* 帖内就地显示的译文 */
+.at-ai-inline-translation {
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  border-left: 3px solid #1f6feb;
+  background: #f0f6ff;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 14px;
+  margin: 10px 0 4px;
+  line-height: 1.7;
+  font-size: 14px;
+  color: #24292f;
+}
+
+.at-ai-inline-title {
+  font-weight: 600;
+  color: #1f6feb;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.at-ai-inline-translation pre {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px 10px;
+  overflow-x: auto;
+}
+
+.at-ai-inline-translation ul { margin: 4px 0 8px; padding-left: 22px; }
+.at-ai-inline-translation code { background: #fff; border: 1px solid #e5e7eb; border-radius: 4px; padding: 1px 5px; }
+.at-ai-inline-translation pre code { border: none; padding: 0; background: transparent; }

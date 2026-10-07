@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "AtCoder AI Translator",
+  "version": "1.2.0",
+  "description": "使用 AI（OpenAI 兼容 / Anthropic 接口）一键翻译 AtCoder 全站内容：题目、公告、题解、评论、排行榜。支持自定义 API Key、模型、翻译缓存与额度控制。",
+  "default_locale": "zh_CN",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://atcoder.jp/*",
+    "https://*.openai.com/*",
+    "https://api.deepseek.com/*",
+    "https://api.moonshot.cn/*",
+    "https://dashscope.aliyuncs.com/*",
+    "https://*.maas.aliyuncs.com/*",
+    "https://api.anthropic.com/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://atcoder.jp/*"
+      ],
+      "js": [
+        "lib/purify.min.js",
+        "lib/marked.min.js",
+        "lib/katex/katex.min.js",
+        "lib/katex/auto-render.min.js",
+        "content/content.js"
+      ],
+      "css": ["lib/katex/katex.min.css", "content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

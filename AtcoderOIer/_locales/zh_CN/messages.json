@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "AtCoder AI Translator",
+    "description": "扩展名称"
+  },
+  "extensionDescription": {
+    "message": "使用 AI（OpenAI 兼容接口）一键翻译 AtCoder 题目描述，支持自定义 API Key、接口地址与模型。",
+    "description": "扩展简短描述"
+  }
+}

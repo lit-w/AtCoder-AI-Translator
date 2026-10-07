@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AtCoder AI Translator - 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>⚙️ AtCoder AI Translator 设置</h1>
+
+    <div class="card">
+      <label for="apiKey">API Key <span class="req">*</span></label>
+      <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off">
+      <p class="hint">你的密钥仅保存在本机浏览器（chrome.storage.sync），不会上传到任何第三方。</p>
+    </div>
+
+    <div class="card">
+      <label for="apiFormat">接口协议</label>
+      <select id="apiFormat">
+        <option value="openai">OpenAI 兼容（/chat/completions）</option>
+        <option value="anthropic">Anthropic（/v1/messages）</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <label for="baseUrl">接口地址（Base URL）</label>
+      <input type="text" id="baseUrl" placeholder="https://api.openai.com/v1">
+      <p class="hint">OpenAI 兼容协议示例：https://api.deepseek.com/v1、https://api.moonshot.cn/v1、https://dashscope.aliyuncs.com/compatible-mode/v1、业务空间 https://{空间ID}.cn-beijing.maas.aliyuncs.com/compatible-mode/v1<br>
+      Anthropic 协议示例：https://api.anthropic.com、业务空间 https://{空间ID}.cn-beijing.maas.aliyuncs.com/apps/anthropic</p>
+    </div>
+
+    <div class="card">
+      <label for="model">模型名称</label>
+      <input type="text" id="model" placeholder="gpt-4o-mini">
+      <p class="hint">例如：gpt-4o-mini、deepseek-chat、moonshot-v1-8k、qwen-plus 等。</p>
+    </div>
+
+    <div class="card">
+      <label for="targetLang">目标语言</label>
+      <input type="text" id="targetLang" placeholder="简体中文">
+    </div>
+
+    <div class="card">
+      <label for="promptTemplate">自定义提示词模板</label>
+      <textarea id="promptTemplate" rows="8"></textarea>
+      <p class="hint">可用占位符：<code>{{lang}}</code> = 目标语言，<code>{{text}}</code> = 题目原文。</p>
+    </div>
+
+    <div class="card row">
+      <label class="switch-label" for="autoTranslate">打开题目页时自动翻译</label>
+      <input type="checkbox" id="autoTranslate">
+    </div>
+
+    <div class="card row">
+      <label class="switch-label" for="useCache">启用翻译缓存
+        <span class="hint-inline" id="cacheInfo">（检查中…）</span>
+      </label>
+      <input type="checkbox" id="useCache">
+    </div>
+
+    <div class="card row">
+      <label class="switch-label">翻译缓存</label>
+      <button id="clearCacheBtn" class="danger">删除全部缓存</button>
+    </div>
+
+    <div class="card">
+      <div class="row" style="margin-bottom:8px">
+        <label class="switch-label" for="budgetEnabled">启用月度字符额度（防欠费）</label>
+        <input type="checkbox" id="budgetEnabled">
+      </div>
+      <label for="budgetWan">每月额度（万字符）</label>
+      <input type="number" id="budgetWan" min="1" max="10000" step="1" placeholder="100">
+      <p class="hint">每次翻译按「发送内容 + 返回译文」的实际字符数记账，额度用尽后自动拦截翻译，每月 1 日自动清零。当前用量：<b id="budgetUsed">-</b></p>
+      <button id="resetBudgetBtn" class="danger" style="margin-top:8px">重置本月用量</button>
+    </div>
+
+    <div class="actions">
+      <button id="saveBtn">保存设置</button>
+      <button id="testBtn" class="secondary">测试连接</button>
+      <span id="status"></span>
+    </div>
+  </div>
+  <script src="../common.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
